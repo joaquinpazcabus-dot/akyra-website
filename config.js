@@ -8,8 +8,8 @@
 
 const AKYRA_CONFIG = {
   supabase: {
-    url: 'https://TU_PROYECTO.supabase.co',        // ← SUPABASE_URL
-    anonKey: 'TU_SUPABASE_ANON_KEY',               // ← SUPABASE_ANON_KEY
+    url: 'https://iczaljxvhykzoehkdzmj.supabase.co',
+    anonKey: 'sb_publishable_2InFi9Pmihv-JwYQ2sA5SQ_VefUYBdG',
   },
   emailjs: {
     serviceId: 'service_mls5rhc',

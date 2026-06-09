@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKYRA Consultora — Ingeniería para tu Libertad</title>
+  <meta name="description" content="Consultoría industrial para PyMEs del interior productivo argentino. Escaneo Rápido de Planta con informe en 48 h, Lean Manufacturing, ISO 9001/14001 e integración de IA.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">AKYRA<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#contacto" class="btn btn-primary">Contactanos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Consultoría industrial · San Rafael, Mendoza</span>
+      <h1>Ingeniería para<br>tu <span>Libertad</span></h1>
+      <p class="lead">Diagnosticamos, implementamos y certificamos mejoras en plantas industriales y agroindustriales. Cobramos por valor, no por hora. Quick Wins siempre antes de cambios estructurales.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Contactanos</a>
+        <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-number">48 h</div>
+          <div class="stat-label">Informe ejecutivo</div>
+        </div>
+        <div>
+          <div class="stat-number">5</div>
+          <div class="stat-label">Dimensiones AKYRA 360</div>
+        </div>
+        <div>
+          <div class="stat-number">ISO</div>
+          <div class="stat-label">9001 · 14001</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Servicios ===== -->
+  <section id="servicios">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">Servicios</span>
+        <h2>Primero el impacto medible, luego la transformación</h2>
+        <p>Tres caminos para mejorar tu planta. Todos empiezan con un diagnóstico concreto y terminan en resultados que podés medir.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card card-accent fade-in">
+          <span class="card-tag">Puerta de entrada</span>
+          <h3>Escaneo Rápido de Planta</h3>
+          <p>Diagnóstico presencial de tu operación. Detectamos cuellos de botella, desperdicios y oportunidades de mejora inmediata.</p>
+          <ul>
+            <li>Visita presencial a planta</li>
+            <li>Informe ejecutivo en 48 h</li>
+            <li>Quick Wins priorizados por impacto</li>
+          </ul>
+        </article>
+        <article class="card fade-in">
+          <span class="card-tag">Optimización</span>
+          <h3>Lean Manufacturing</h3>
+          <p>Optimizamos procesos con metodología Lean y VSM. Menos desperdicio, más flujo, mejores indicadores de producción.</p>
+          <ul>
+            <li>Mapeo de flujo de valor (VSM)</li>
+            <li>Reducción de desperdicios</li>
+            <li>Mejora continua con retainer mensual</li>
+          </ul>
+        </article>
+        <article class="card fade-in">
+          <span class="card-tag">Certificación + IA</span>
+          <h3>ISO 9001/14001 e Integración de IA</h3>
+          <p>Implementamos y certificamos sistemas de gestión. Integramos IA en procesos industriales y administrativos.</p>
+          <ul>
+            <li>Implementación ISO con ciclo PHVA</li>
+            <li>IA aplicada a procesos reales</li>
+            <li>Capacitaciones "IA sin filtros"</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contacto ===== -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <span class="eyebrow">Contacto</span>
+          <h2>Hablemos de tu planta</h2>
+          <p>Contanos tu situación. Te respondemos con un próximo paso concreto, sin compromiso.</p>
+          <p>
+            <a href="mailto:akyraconsultora@gmail.com">akyraconsultora@gmail.com</a><br>
+            San Rafael, Mendoza, Argentina
+          </p>
+        </div>
+        <form id="contactForm" class="fade-in" novalidate>
+          <div class="form-group">
+            <label for="name">Nombre *</label>
+            <input type="text" id="name" name="user_name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="user_email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="company">Empresa</label>
+            <input type="text" id="company" name="user_company" autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje *</label>
+            <textarea id="message" name="message" required placeholder="Contanos sobre tu operación y qué querés mejorar"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Enviar mensaje</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#" class="nav-logo">AKYRA<span>.</span></a>
+      <ul class="footer-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="https://www.instagram.com/akyraconsultora/?hl=es-la" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+      <p class="footer-copy">© <span id="year"></span> AKYRA Consultora — Ingeniería para tu Libertad</p>
+    </div>
+  </footer>
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="config.js"></script>
+  <script src="db.js"></script>
+  <script src="email.js"></script>
+  <script src="components.js"></script>
+</body>
+</html>

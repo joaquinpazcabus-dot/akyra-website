@@ -12,9 +12,9 @@ const AKYRA_CONFIG = {
     anonKey: 'TU_SUPABASE_ANON_KEY',               // ← SUPABASE_ANON_KEY
   },
   emailjs: {
-    serviceId: 'TU_SERVICE_ID',                    // ← EMAILJS_SERVICE_ID
-    templateId: 'TU_TEMPLATE_ID',                  // ← EMAILJS_TEMPLATE_ID
-    publicKey: 'TU_PUBLIC_KEY',                    // ← EMAILJS_PUBLIC_KEY
+    serviceId: 'service_mls5rhc',
+    templateId: 'template_pg6jgth',
+    publicKey: 'X34jZYeeU9u0W7hB8',
   },
 };
 

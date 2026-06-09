@@ -9,7 +9,7 @@ if (AKYRA_CONFIG.isConfigured.emailjs && window.emailjs) {
 
 /**
  * Envía el email de contacto vía EmailJS.
- * Template fields: user_name, user_email, user_company, message
+ * Template "Contact Us" de EmailJS — fields: name, email, title, message, time
  * @param {{name: string, email: string, company: string, message: string}} lead
  * @returns {Promise<{ok: boolean, error?: string}>}
  */
@@ -23,10 +23,11 @@ async function sendLeadEmail(lead) {
       AKYRA_CONFIG.emailjs.serviceId,
       AKYRA_CONFIG.emailjs.templateId,
       {
-        user_name: lead.name,
-        user_email: lead.email,
-        user_company: lead.company || '—',
+        name: lead.name,
+        email: lead.email,
+        title: lead.company || 'Sin empresa',
         message: lead.message,
+        time: new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Mendoza' }),
       }
     );
     return { ok: true };

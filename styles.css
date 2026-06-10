@@ -159,14 +159,23 @@ section {
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.375rem;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
   color: var(--white);
   text-decoration: none;
 }
-.nav-logo span { color: var(--cyan); }
+
+.logo-mark {
+  height: 30px;
+  width: auto;
+  color: var(--white); /* trazo del logo via currentColor */
+  flex-shrink: 0;
+}
 
 .nav-links {
   display: flex;
@@ -266,7 +275,7 @@ section {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--space-3);
 }
 
@@ -415,6 +424,29 @@ section {
 
 .footer-copy { font-size: 0.8125rem; }
 
+/* ---------- WhatsApp flotante ---------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: var(--space-3);
+  right: var(--space-3);
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 180ms var(--motion), background-color 180ms var(--motion);
+}
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--white);
+}
+.whatsapp-float:hover { transform: translateY(-2px); background: #2BE371; }
+.whatsapp-float:active { transform: translateY(0); background: #1FB456; }
+
 /* ---------- Animaciones de entrada ---------- */
 .fade-in {
   opacity: 0;
@@ -433,7 +465,6 @@ section {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .cards-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; }
   .hero-stats { gap: var(--space-4); }

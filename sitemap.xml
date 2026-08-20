@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://akyra-website.vercel.app/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://akyra-website.vercel.app/gael-mascota-akyra-consultora-ingenieria.webp</image:loc>
+      <image:title>Gael, la mascota de AKYRA Consultora</image:title>
+      <image:caption>Ilustración de Gael, la mascota de AKYRA Consultora, consultoría de ingeniería para PyMEs en San Rafael, Mendoza.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://akyra-website.vercel.app/og-image.jpg</image:loc>
+      <image:title>AKYRA Consultora — Ingeniería con Propósito</image:title>
+      <image:caption>Consultoría de ingeniería para PyMEs industriales y agroindustriales: mejora de procesos Lean, certificación ISO 9001 y 14001 e inteligencia artificial aplicada.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://akyra-website.vercel.app/isotipo-blanco.png</image:loc>
+      <image:title>Isotipo de AKYRA Consultora</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://akyra-website.vercel.app/guia-ia</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://akyra-website.vercel.app/og-image.jpg</image:loc>
+      <image:title>Guía: cuándo conviene usar inteligencia artificial en tu empresa</image:title>
+      <image:caption>Guía gratuita de AKYRA Consultora para decidir en qué tareas de una PyME conviene aplicar inteligencia artificial.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://akyra-website.vercel.app/privacidad</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://akyra-website.vercel.app/terminos</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+</urlset>

@@ -220,3 +220,82 @@ section { padding: var(--space-7) 0; }
 .evento p { color: var(--txt-dim-light); font-size: 0.95rem; margin-bottom: 6px; }
 .evento .btn { margin-top: auto; }
 @media (max-width: 700px) { .evento h3 { padding-right: 70px; } }
+
+/* ---------- Recursos gratuitos ---------- */
+.recursos { background: var(--white); }
+.recurso { display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--space-5); align-items: center; border: 1px solid var(--hairline); border-top: 4px solid var(--cyan); border-radius: var(--radius-card); padding: var(--space-6); }
+.recurso-copy h2 { margin-bottom: var(--space-2); }
+.recurso-copy > p { color: var(--txt-dim-light); max-width: 58ch; }
+.recurso-bullets { list-style: none; margin: var(--space-3) 0 var(--space-4); }
+.recurso-bullets li { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 0.92rem; font-weight: 600; }
+.recurso-bullets svg { width: 18px; height: 18px; color: var(--cyan); flex-shrink: 0; }
+.recurso-nota { font-size: 0.82rem; color: var(--txt-dim-light); margin-top: var(--space-2); }
+.recurso-mini { background: var(--graphite-900); border-radius: var(--radius-card); padding: var(--space-4); color: var(--white); }
+.mini-tag { display: block; font-weight: 700; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--cyan); margin-bottom: var(--space-3); }
+.mini-row { display: flex; align-items: center; gap: 10px; font-size: 0.86rem; font-weight: 600; padding: 10px 0; border-top: 1px solid var(--hairline-inverse); color: var(--txt-dim-dark); }
+.mini-row:first-of-type { border-top: none; }
+.mini-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.mini-dot.v { background: #1FA97A; } .mini-dot.a { background: #C98A0E; } .mini-dot.r { background: #D2493F; }
+.mini-foot { text-wrap: balance; margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--hairline-inverse); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cyan); }
+@media (max-width: 920px) { .recurso { grid-template-columns: 1fr; gap: var(--space-4); padding: var(--space-4); } }
+@media (max-width: 700px) { .recurso-copy .btn { width: 100%; } }
+
+/* ---------- Accesibilidad ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 300; }
+.skip-link:focus { left: 12px; top: 12px; background: var(--cyan); color: var(--graphite-900); padding: 12px 20px; border-radius: 8px; font-weight: 700; text-decoration: none; }
+/* Cian con contraste suficiente para texto chico sobre fondo claro (WCAG AA) */
+:root { --cyan-text: #00728F; }
+.svc-out .lbl, .member .role, .evento-fecha { color: var(--cyan-text); }
+
+/* ---------- Tabla comparativa (ahora <table> real) ---------- */
+table.compare { width: 100%; border-collapse: collapse; }
+table.compare th, table.compare td { font-weight: 500; }
+.compare-head th { font-weight: 700; }
+.compare-row th { text-align: left; font-weight: 500; }
+
+/* ---------- Contacto: dirección y mapa ---------- */
+address.contact-data, address.footer-nap { font-style: normal; }
+.footer-nap { font-size: 0.9rem; line-height: 1.5; }
+.contact-data strong { color: var(--white); }
+.mapa { margin-top: var(--space-3); border: 1px solid var(--hairline-inverse); border-radius: var(--radius-card); overflow: hidden; line-height: 0; }
+.mapa iframe { width: 100%; height: 260px; display: block; }
+.reassure a { color: var(--cyan); text-decoration: none; }
+.reassure a:hover { text-decoration: underline; }
+.footer-base a { color: var(--cyan); text-decoration: none; }
+.footer-base a:hover { text-decoration: underline; }
+
+/* ---------- Ajuste de contraste en la tarjeta de recursos ---------- */
+.recurso-bullets svg { color: var(--cyan-text); }
+
+/* ---------- Páginas legales ---------- */
+.legal { padding-top: calc(72px + var(--space-6)); }
+.legal .narrow { max-width: 760px; }
+.legal h1 { font-size: clamp(2rem, 4.4vw, 2.9rem); margin-bottom: var(--space-2); }
+.legal-fecha { font-size: 0.85rem; font-weight: 600; color: var(--txt-dim-light); margin-bottom: var(--space-5); }
+.legal h2 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); margin: var(--space-5) 0 var(--space-2); }
+.legal p, .legal li { color: var(--txt-dim-light); font-size: 0.97rem; }
+.legal p + p { margin-top: var(--space-2); }
+.legal ul { margin: var(--space-2) 0 var(--space-2) var(--space-3); }
+.legal li { padding: 6px 0; }
+.legal a { color: var(--cyan-text); }
+.legal .lead { color: var(--graphite); font-weight: 600; }
+
+/* ---------- CTA fijo en mobile ---------- */
+.sticky-cta { display: none; }
+@media (max-width: 700px) {
+  .sticky-cta { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 95; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(26,27,27,0.97); border-top: 1px solid var(--hairline-inverse); }
+  .sticky-cta .btn { flex: 1; padding: 13px 10px; font-size: 0.88rem; }
+  .btn-sticky-wa { background: #25D366; color: #fff; }
+  .btn-sticky-wa svg { width: 18px; height: 18px; fill: currentColor; }
+  .whatsapp-float { display: none; }
+  body { padding-bottom: 72px; }
+}
+@media print { .sticky-cta, .mapa { display: none !important; } }
+
+/* ---------- Contraste AA en los botones de WhatsApp ----------
+   Se conserva el verde de marca y se oscurece el texto: blanco sobre
+   #25D366 da 1.98:1 (falla); grafito sobre #25D366 da 8.7:1. */
+.btn-whatsapp-inline, .btn-sticky-wa { color: var(--graphite-900); }
+.btn-whatsapp-inline:hover, .btn-sticky-wa:hover { color: var(--graphite-900); }
+.whatsapp-float svg { fill: var(--graphite-900); }

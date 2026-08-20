@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Cuándo conviene usar IA en tu empresa? Guía para PyMEs</title>
+<meta name="description" content="Criterio simple para saber en qué tareas de tu PyME la IA te ahorra horas y en cuáles no. Con test de 2 minutos. Gratis, por AKYRA Consultora.">
+<meta name="author" content="AKYRA Consultora">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="¿Cuándo conviene usar IA en tu empresa?">
+<meta property="og:description" content="Guía gratuita para PyMEs argentinas: cómo decidir en qué tarea la IA te ahorra horas de verdad — y en cuál te hace perder tiempo y plata.">
+<meta property="og:image" content="https://akyra-website.vercel.app/og-image.jpg">
+<meta property="og:url" content="https://akyra-website.vercel.app/guia-ia">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¿Cuándo conviene usar IA en tu empresa?">
+<meta name="twitter:description" content="Guía gratuita para PyMEs argentinas. La regla de las 3R + test de decisión + plan de 30 días.">
+<meta name="twitter:image" content="https://akyra-website.vercel.app/og-image.jpg">
+<link rel="canonical" href="https://akyra-website.vercel.app/guia-ia">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<style>
+/* ================================================================
+   AKYRA Consultora — Guía: ¿Cuándo conviene usar IA en tu empresa?
+   Design system: Grafito · Cyan #00BFF9 · Blanco · Montserrat
+   Documento 100% autocontenido: sin pedidos de red.
+   ================================================================ */
+
+
+:root{
+  --graphite:#2D2E2E; --graphite-900:#1A1B1B; --graphite-800:#232424;
+  --cyan:#00BFF9; --cyan-dark:#009FD1;
+  --white:#FBFBFB; --muted-light:#F2F2F0;
+  --hairline:rgba(45,46,46,.14); --hairline-inverse:rgba(251,251,251,.14);
+  --txt-dim-light:rgba(45,46,46,.72); --txt-dim-dark:rgba(251,251,251,.72);
+  --verde:#1FA97A; --amarillo:#C98A0E; --rojo:#D2493F;
+  --font:'Montserrat','Segoe UI',Roboto,system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --s2:16px; --s3:24px; --s4:32px; --s5:40px; --s6:64px; --s7:96px;
+  --radius:10px; --radius-card:14px;
+  --motion:cubic-bezier(.2,0,0,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);font-weight:500;line-height:1.55;color:var(--graphite);background:var(--white);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block;height:auto}
+h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
+h1{font-size:clamp(2.05rem,5vw,3.4rem)}
+h2{font-size:clamp(1.55rem,3.4vw,2.3rem)}
+h3{font-size:1.15rem;font-weight:700}
+a{color:inherit}
+em{font-style:italic}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:4px}
+section{padding:var(--s7) 0;scroll-margin-top:80px}
+.container{max-width:1080px;margin:0 auto;padding:0 var(--s3)}
+.narrow{max-width:780px}
+.eyebrow{font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;display:inline-flex;align-items:center;gap:9px;margin-bottom:var(--s2)}
+.eyebrow::before{content:'';width:22px;height:2px;background:var(--cyan);display:inline-block;flex-shrink:0}
+.lead{font-size:1.1rem;max-width:62ch;color:var(--txt-dim-light)}
+.section-header{max-width:720px;margin-bottom:var(--s6)}
+.section-header p{margin-top:var(--s2);color:var(--txt-dim-light)}
+p+p{margin-top:var(--s2)}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:8px;top:8px;z-index:300;background:var(--cyan);color:var(--graphite-900);padding:10px 18px;border-radius:8px;font-weight:700}
+
+/* ---------- Barra de progreso ---------- */
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--cyan);width:0;z-index:200}
+
+/* ---------- Navbar ---------- */
+.navbar{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(26,27,27,.95);border-bottom:1px solid var(--hairline-inverse)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;height:64px;gap:var(--s3)}
+.nav-logo{display:inline-flex;align-items:center;gap:11px;font-weight:800;font-size:1.15rem;letter-spacing:.05em;color:var(--white);text-decoration:none}
+.nav-logo .bar{width:4px;height:22px;background:var(--cyan);display:inline-block;flex-shrink:0}
+.logo-mark{height:30px;width:auto}
+.nav-right{display:flex;align-items:center;gap:var(--s3)}
+.nav-right a:not(.btn){font-weight:700;font-size:.84rem;color:var(--txt-dim-dark);text-decoration:none;transition:color .18s var(--motion)}
+.nav-right a:not(.btn):hover{color:var(--cyan)}
+.nav-right .btn{padding:9px 17px;font-size:.82rem}
+@media(max-width:700px){.nav-hide{display:none}}
+
+/* ---------- Botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font);font-weight:700;font-size:.95rem;line-height:1.2;padding:14px 26px;border-radius:var(--radius);border:1.5px solid transparent;cursor:pointer;text-decoration:none;text-align:center;transition:background-color .18s var(--motion),color .18s var(--motion),border-color .18s var(--motion)}
+.btn-primary{background:var(--cyan);color:var(--graphite-900)}
+.btn-primary:hover{background:#2bcbfb}
+.btn-primary:active{background:var(--cyan-dark)}
+.btn-secondary{background:transparent;color:var(--graphite);border-color:var(--hairline)}
+.btn-secondary:hover{border-color:var(--cyan);color:var(--cyan-dark)}
+.on-dark .btn-secondary{color:var(--white);border-color:var(--hairline-inverse)}
+.on-dark .btn-secondary:hover{color:var(--cyan);border-color:var(--cyan)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#2BE371}
+.btn-wa svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--graphite-900);color:var(--white);padding:calc(64px + var(--s6)) 0 var(--s6)}
+.hero h1{color:var(--white)}
+.hero h1 span{color:var(--cyan)}
+.hero .lead{color:var(--txt-dim-dark);margin:var(--s3) 0 var(--s4)}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:.74rem;font-weight:700;letter-spacing:.03em;color:var(--txt-dim-dark);border:1px solid var(--hairline-inverse);border-radius:100px;padding:7px 15px;margin-bottom:var(--s3)}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);flex-shrink:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.firma{font-size:.86rem;color:var(--txt-dim-dark);margin-top:var(--s3);max-width:60ch;line-height:1.55}
+.firma strong{color:var(--white)}
+.meta-row{list-style:none;display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--hairline-inverse)}
+.meta-row li{display:inline-flex;align-items:center;gap:9px;font-size:.85rem;font-weight:700;color:var(--txt-dim-dark)}
+.meta-row svg{width:17px;height:17px;color:var(--cyan);flex-shrink:0}
+
+/* ---------- Índice ---------- */
+.toc{background:var(--graphite-800);color:var(--white);padding:var(--s5) 0}
+.toc h2{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--txt-dim-dark);font-weight:700;margin-bottom:var(--s3)}
+.toc ol{list-style:none;counter-reset:toc;display:grid;grid-template-columns:repeat(3,1fr);gap:2px var(--s4)}
+.toc li{counter-increment:toc}
+.toc a{display:flex;gap:11px;align-items:baseline;padding:10px 0;text-decoration:none;font-weight:700;font-size:.94rem;color:var(--white);border-bottom:1px solid var(--hairline-inverse);transition:color .16s var(--motion)}
+.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--cyan);font-size:.74rem;font-weight:800;flex-shrink:0}
+.toc a:hover{color:var(--cyan)}
+@media(max-width:820px){.toc ol{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.toc ol{grid-template-columns:1fr}}
+
+/* ---------- Bloque destacado ---------- */
+.claim{border-left:4px solid var(--cyan);padding:var(--s2) 0 var(--s2) var(--s3);margin:var(--s5) 0;font-size:clamp(1.25rem,2.6vw,1.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.claim small{display:block;margin-top:11px;font-size:.95rem;font-weight:500;letter-spacing:0;color:var(--txt-dim-light);line-height:1.55}
+
+/* ---------- Las 3R ---------- */
+.tresR{background:var(--muted-light)}
+.r-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
+.r-card{background:var(--white);border:1px solid var(--hairline);border-top:4px solid var(--cyan);border-radius:var(--radius-card);padding:var(--s4);display:flex;flex-direction:column}
+.r-num{font-weight:800;font-size:2.5rem;line-height:1;color:var(--cyan);letter-spacing:-.04em}
+.r-card h3{margin:12px 0 10px}
+.r-card p{color:var(--txt-dim-light);font-size:.94rem}
+.r-test{margin-top:auto;padding-top:var(--s3);font-size:.9rem;font-weight:700}
+.r-test .lbl{display:block;font-weight:700;font-size:.63rem;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan-dark);margin-bottom:7px;padding-top:var(--s2);border-top:1px solid var(--hairline)}
+
+/* ---------- Semáforo ---------- */
+.sem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin-top:var(--s4)}
+.sem{border:1px solid var(--hairline);border-radius:var(--radius-card);padding:var(--s4);background:var(--white)}
+.sem .dot-lg{width:15px;height:15px;border-radius:50%;display:inline-block;margin-bottom:15px}
+.sem.v .dot-lg{background:var(--verde)} .sem.a .dot-lg{background:var(--amarillo)} .sem.r .dot-lg{background:var(--rojo)}
+.sem h3{margin-bottom:9px}
+.sem.v h3{color:var(--verde)} .sem.a h3{color:var(--amarillo)} .sem.r h3{color:var(--rojo)}
+.sem p{font-size:.93rem;color:var(--txt-dim-light)}
+
+/* ---------- Íconos dibujados (sin dependencias) ---------- */
+.ico{width:17px;height:17px;flex-shrink:0;background-repeat:no-repeat;background-position:center;background-size:contain;display:inline-block}
+.ico-si{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231FA97A' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")}
+.ico-no{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D2493F' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E")}
+.ico-ojo{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C98A0E' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 4v10'/%3E%3Cpath d='M12 19.4v.2'/%3E%3C/svg%3E")}
+
+/* ---------- Test ---------- */
+.test{background:var(--graphite-900);color:var(--white)}
+.test .eyebrow,.test h2{color:var(--white)}
+.test .section-header p{color:var(--txt-dim-dark)}
+.test-box{background:var(--graphite-800);border:1px solid var(--hairline-inverse);border-radius:var(--radius-card);padding:var(--s5)}
+.q{margin-bottom:var(--s4);border:0;padding:0;min-width:0}
+.q-label{display:block;font-weight:700;font-size:1rem;margin-bottom:14px;line-height:1.35;color:var(--white);padding:0}
+.q-label .n{color:var(--cyan);margin-right:9px;font-weight:800}
+.opts{display:grid;gap:8px}
+.opt{display:flex;align-items:flex-start;gap:12px;border:1px solid var(--hairline-inverse);border-radius:var(--radius);padding:13px 16px;cursor:pointer;transition:border-color .16s var(--motion),background-color .16s var(--motion);font-size:.93rem;color:var(--txt-dim-dark);line-height:1.4;-webkit-tap-highlight-color:transparent}
+.opt:hover{border-color:rgba(0,191,249,.55)}
+.opt input{margin:0;accent-color:var(--cyan);flex-shrink:0;margin-top:2px;width:17px;height:17px;cursor:pointer}
+.opt.checked{border-color:var(--cyan);background:rgba(0,191,249,.08);color:var(--white)}
+.q.pendiente .opt{border-color:rgba(210,73,63,.75)}
+.task-field{margin-bottom:var(--s5)}
+.task-field label{display:block;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--txt-dim-dark);margin-bottom:10px}
+.task-field input{width:100%;font-family:var(--font);font-weight:700;font-size:1rem;color:var(--white);background:var(--graphite);border:1px solid var(--hairline-inverse);border-radius:var(--radius);padding:14px 16px;transition:border-color .18s var(--motion)}
+.task-field input::placeholder{color:rgba(251,251,251,.38);font-weight:500}
+.task-field input:focus{outline:none;border-color:var(--cyan)}
+.test-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--hairline-inverse);padding-top:var(--s4)}
+.test-note{font-size:.82rem;color:rgba(251,251,251,.5);font-weight:700}
+
+/* ---------- Resultado ---------- */
+.result{display:none;margin-top:var(--s4);border:1px solid var(--hairline-inverse);border-radius:var(--radius-card);overflow:hidden;background:var(--graphite)}
+.result.show{display:block}
+.result-head{padding:var(--s4) var(--s5);border-left:5px solid var(--cyan)}
+.result-head.v{border-left-color:var(--verde)}
+.result-head.a{border-left-color:var(--amarillo)}
+.result-head.r{border-left-color:var(--rojo)}
+.result-verdict{font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;margin-bottom:11px;display:flex;align-items:center;gap:10px}
+.result-verdict .dot-lg{width:11px;height:11px;border-radius:50%;display:inline-block;flex-shrink:0}
+.v .result-verdict{color:var(--verde)} .a .result-verdict{color:var(--amarillo)} .r .result-verdict{color:var(--rojo)}
+.v .result-verdict .dot-lg{background:var(--verde)} .a .result-verdict .dot-lg{background:var(--amarillo)} .r .result-verdict .dot-lg{background:var(--rojo)}
+.result-head h3{color:var(--white);font-size:1.3rem;font-weight:800;letter-spacing:-.02em;line-height:1.25;margin-bottom:13px}
+.result-head p{color:var(--txt-dim-dark);font-size:.96rem}
+.chips{display:flex;gap:9px;flex-wrap:wrap;padding:0 var(--s5) var(--s4)}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;border:1px solid var(--hairline-inverse);border-radius:100px;padding:7px 14px;color:var(--txt-dim-dark)}
+.chip.ok{color:var(--verde);border-color:rgba(31,169,122,.5)}
+.chip.no{color:var(--rojo);border-color:rgba(210,73,63,.5)}
+.chip .ico{width:14px;height:14px}
+.result-body{border-top:1px solid var(--hairline-inverse);padding:var(--s4) var(--s5)}
+.result-body h4{font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan);font-weight:800;margin-bottom:14px}
+.result-body ul{list-style:none;font-size:.94rem;color:var(--txt-dim-dark)}
+.result-body ul li{padding:11px 0;border-top:1px solid var(--hairline-inverse);display:flex;gap:11px;align-items:flex-start;line-height:1.5}
+.result-body ul li:first-child{border-top:none;padding-top:0}
+.result-body ul li .ico{margin-top:3px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300BFF9' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E")}
+.gain{margin-top:var(--s3);padding-top:var(--s3);border-top:1px solid var(--hairline-inverse);font-size:.94rem;color:var(--white)}
+.gain b{color:var(--cyan);font-size:1.1rem}
+.result-foot{border-top:1px solid var(--hairline-inverse);padding:var(--s3) var(--s5);display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+/* ---------- Mapa por área ---------- */
+.mapa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
+.area{background:var(--white);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:var(--s4);transition:border-color .18s var(--motion)}
+.area:hover{border-color:var(--cyan)}
+.area-tag{font-weight:700;font-size:.66rem;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan-dark)}
+.area h3{margin:10px 0 13px}
+.area ul{list-style:none;font-size:.9rem}
+.area ul li{padding:10px 0;border-top:1px solid var(--hairline);color:var(--txt-dim-light);display:flex;gap:10px;align-items:flex-start;line-height:1.45}
+.area ul li .ico{margin-top:2px;width:15px;height:15px}
+.leyenda{display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s4);font-size:.85rem;color:var(--txt-dim-light);font-weight:700}
+.leyenda span{display:inline-flex;align-items:center;gap:8px}
+
+/* ---------- Errores ---------- */
+.errores{background:var(--graphite-900);color:var(--white)}
+.errores .eyebrow,.errores h2{color:var(--white)}
+.errores .section-header p{color:var(--txt-dim-dark)}
+.err-list{border:1px solid var(--hairline-inverse);border-radius:var(--radius-card);overflow:hidden}
+.err{display:grid;grid-template-columns:64px 1fr;border-top:1px solid var(--hairline-inverse)}
+.err:first-child{border-top:none}
+.err-n{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;color:var(--cyan);background:rgba(251,251,251,.03);letter-spacing:-.03em}
+.err-body{padding:var(--s3) var(--s4)}
+.err-body h3{color:var(--white);margin-bottom:8px;font-size:1.05rem}
+.err-body p{color:var(--txt-dim-dark);font-size:.94rem}
+
+/* ---------- Plan 30 días ---------- */
+.plan{background:var(--muted-light)}
+.plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3)}
+.week{background:var(--white);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:var(--s4);display:flex;flex-direction:column}
+.week-lbl{font-weight:800;font-size:.66rem;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan-dark);display:block;margin-bottom:11px}
+.week h3{margin-bottom:11px;font-size:1.05rem}
+.week p{font-size:.92rem;color:var(--txt-dim-light)}
+.week .out{margin-top:auto;padding-top:var(--s3);font-size:.85rem;font-weight:700}
+.week .out span{display:block;padding-top:var(--s2);border-top:1px solid var(--hairline)}
+
+/* ---------- Prompts ---------- */
+.prompts{background:var(--white)}
+.prompt{border:1px solid var(--hairline);border-radius:var(--radius-card);margin-bottom:var(--s3);overflow:hidden}
+.prompt-head{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);background:var(--muted-light);flex-wrap:wrap}
+.prompt-head h3{font-size:1.02rem}
+.prompt-head .tag{display:block;font-weight:700;font-size:.64rem;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan-dark);margin-bottom:6px}
+.copy-btn{font-family:var(--font);font-weight:700;font-size:.78rem;padding:10px 17px;border-radius:8px;border:1.5px solid var(--graphite);background:transparent;color:var(--graphite);cursor:pointer;transition:.16s var(--motion);white-space:nowrap}
+.copy-btn:hover{background:var(--graphite);color:var(--white)}
+.copy-btn.done{background:var(--cyan);border-color:var(--cyan);color:var(--graphite-900)}
+.prompt pre{margin:0;padding:var(--s4);font-family:var(--font);font-weight:500;font-size:.88rem;line-height:1.7;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:break-word;color:var(--graphite);background:var(--white)}
+.prompt pre b{color:var(--cyan-dark);font-weight:700}
+
+/* ---------- CTA ---------- */
+.cta{background:var(--graphite-900);color:var(--white);text-align:center}
+.cta h2{color:var(--white);margin-bottom:var(--s3)}
+.cta p{color:var(--txt-dim-dark);max-width:60ch;margin:0 auto var(--s5)}
+.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-foot{margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid var(--hairline-inverse);font-size:.83rem;color:rgba(251,251,251,.55)}
+.cta-foot a{color:var(--cyan);text-decoration:none}
+.cta-foot a:hover{text-decoration:underline}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .r-grid,.sem-grid,.mapa-grid,.plan-grid{grid-template-columns:repeat(2,1fr)}
+  .test-box{padding:var(--s4)}
+  .result-head,.result-body,.chips,.result-foot{padding-left:var(--s4);padding-right:var(--s4)}
+}
+@media(max-width:640px){
+  section{padding:var(--s6) 0}
+  .r-grid,.sem-grid,.mapa-grid,.plan-grid{grid-template-columns:1fr}
+  .err{grid-template-columns:46px 1fr}
+  .err-body{padding:var(--s3)}
+  .test-box{padding:var(--s3)}
+  .prompt pre{font-size:.85rem;padding:var(--s3)}
+  .hero-actions .btn,.cta-actions .btn,.test-actions .btn,.result-foot .btn{width:100%}
+  .prompt-head{flex-direction:column;align-items:flex-start}
+  .copy-btn{width:100%}
+}
+
+/* ---------- Movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+
+/* ---------- Impresión ---------- */
+@media print{
+  .navbar,.progress,.test-actions,.result-foot,.no-print,.toc{display:none!important}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  section{padding:14pt 0;break-inside:auto}
+  .hero{background:#fff!important;color:#000!important;padding:0 0 14pt}
+  .hero h1,.hero .lead,.test h2,.test .eyebrow,.errores h2,.errores .eyebrow,.cta h2,.cta .eyebrow,.result-head h3,.err-body h3,.q-label,.gain{color:#000!important}
+  .test,.errores,.cta,.test-box,.result,.result-head,.err-list,.err-n{background:#fff!important;color:#000!important;border-color:#bbb!important}
+  .test .section-header p,.errores .section-header p,.cta p,.err-body p,.opt,.result-head p,.result-body ul,.pill,.meta-row li,.cta-foot{color:#333!important}
+  .r-card,.area,.week,.prompt,.sem,.err{break-inside:avoid;border-color:#bbb!important}
+  .hero,.tresR,.plan,.prompts{break-after:auto}
+  a{text-decoration:none;color:#000!important}
+  .btn{display:none!important}
+}
+
+/* ---------- Footer del sitio ---------- */
+.footer{background:#141515;color:var(--txt-dim-dark);padding:var(--s6) 0 var(--s4);border-top:1px solid var(--hairline-inverse)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:var(--s4)}
+.footer-brand p{font-size:.88rem;margin-top:12px;max-width:32ch}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-h{font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--white);margin-bottom:4px}
+.footer-col a{color:var(--txt-dim-dark);text-decoration:none;font-size:.9rem;transition:color .18s var(--motion)}
+.footer-col a:hover{color:var(--cyan)}
+address.footer-nap{font-style:normal;font-size:.9rem;line-height:1.5;color:var(--txt-dim-dark)}
+.footer-base a{color:var(--cyan);text-decoration:none}
+.footer-base{margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--hairline-inverse);font-size:.8rem}
+.whatsapp-float{position:fixed;bottom:var(--s3);right:var(--s3);z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff}
+.whatsapp-float svg{width:30px;height:30px}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.footer-grid{grid-template-columns:1fr}}
+@media print{.footer,.whatsapp-float{display:none!important}}
+
+/* ---------- Accesibilidad: contraste AA para texto chico sobre claro ---------- */
+:root{ --cyan-text:#00728F; --verde-txt:#137A57; --amarillo-txt:#94650A; --rojo-txt:#C33C33 }
+.r-test .lbl,.area-tag,.week-lbl,.prompt-head .tag{color:var(--cyan-text)}
+.sem.v h3{color:var(--verde-txt)} .sem.a h3{color:var(--amarillo-txt)} .sem.r h3{color:var(--rojo-txt)}
+.test-note{color:rgba(251,251,251,.68)}
+.task-field input::placeholder{color:rgba(251,251,251,.55)}
+.leyenda{color:var(--graphite)}
+.prompt pre b{color:var(--cyan-text)}
+.btn-wa,.btn-sticky-wa{color:var(--graphite-900)}
+.btn-wa:hover,.btn-sticky-wa:hover{color:var(--graphite-900)}
+.whatsapp-float{color:var(--graphite-900)}
+
+/* ---------- Respuesta directa + resumen ---------- */
+.respuesta{font-size:1.15rem;line-height:1.5;font-weight:600;margin-bottom:var(--s4)}
+.respuesta b{font-weight:800}
+.tldr{border:1px solid var(--hairline);border-left:4px solid var(--cyan);border-radius:var(--radius-card);background:var(--muted-light);padding:var(--s4);margin-bottom:var(--s4)}
+.tldr h2{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--cyan-text);margin-bottom:var(--s2)}
+.tldr ul{list-style:none;font-size:.96rem}
+.tldr li{display:flex;gap:11px;align-items:flex-start;padding:8px 0;line-height:1.5;color:var(--graphite)}
+.tldr li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--cyan);flex-shrink:0;margin-top:9px}
+.cta-inline{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:var(--s5)}
+.cta-inline .nota{font-size:.83rem;color:var(--txt-dim-light);font-weight:600}
+
+/* ---------- Tabla resumen ---------- */
+.tabla-wrap{overflow-x:auto;margin-top:var(--s5);border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--white)}
+table.filtros{width:100%;border-collapse:collapse;min-width:560px}
+table.filtros caption{text-align:left;padding:var(--s3) var(--s4) 0;font-weight:800;font-size:1.02rem;letter-spacing:-.01em}
+table.filtros th,table.filtros td{text-align:left;padding:14px var(--s4);border-top:1px solid var(--hairline);font-size:.93rem;vertical-align:top;line-height:1.5}
+table.filtros thead th{border-top:none;font-size:.66rem;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--cyan-text);padding-top:var(--s3)}
+table.filtros tbody th{font-weight:800;white-space:nowrap;color:var(--graphite)}
+table.filtros td{color:var(--txt-dim-light)}
+
+/* ---------- Preguntas frecuentes ---------- */
+.faq{background:var(--muted-light)}
+.faq-list{max-width:820px}
+.faq-item{background:var(--white);border:1px solid var(--hairline);border-radius:var(--radius);margin-bottom:12px;padding:2px 20px}
+.faq-item summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;font-size:1rem;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.35}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';color:var(--cyan-text);font-weight:800;font-size:1.4rem;line-height:1;flex-shrink:0}
+.faq-item[open] summary::after{content:'–'}
+.faq-item p{color:var(--txt-dim-light);font-size:.95rem;padding:0 0 18px}
+.faq-item p+p{margin-top:10px}
+
+/* ---------- Nota de privacidad del test ---------- */
+.nota-privacidad{margin-top:var(--s3);font-size:.8rem;color:rgba(251,251,251,.62);line-height:1.5}
+.nota-privacidad a{color:var(--cyan)}
+
+/* ---------- Compartir ---------- */
+.compartir{background:var(--white);padding:var(--s6) 0}
+.compartir h2{font-size:clamp(1.3rem,2.6vw,1.7rem);margin-bottom:10px}
+.compartir p{color:var(--txt-dim-light);margin-bottom:var(--s3)}
+.share-row{display:flex;gap:10px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font);font-weight:700;font-size:.88rem;padding:12px 20px;border-radius:var(--radius);border:1.5px solid var(--hairline);background:transparent;color:var(--graphite);text-decoration:none;cursor:pointer;transition:border-color .16s var(--motion),color .16s var(--motion)}
+.share-btn svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+.share-btn:hover{border-color:var(--cyan);color:var(--cyan-text)}
+.share-btn.done{border-color:var(--cyan);background:var(--cyan);color:var(--graphite-900)}
+
+/* ---------- CTA fijo en mobile ---------- */
+.sticky-cta{display:none}
+@media(max-width:700px){
+  .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:95;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(26,27,27,.97);border-top:1px solid var(--hairline-inverse)}
+  .sticky-cta .btn{flex:1;padding:13px 10px;font-size:.88rem}
+  .btn-sticky-wa{background:#25D366;color:var(--graphite-900)}
+  .btn-sticky-wa svg{width:18px;height:18px;fill:currentColor}
+  .whatsapp-float{display:none}
+  body{padding-bottom:72px}
+}
+@media print{.sticky-cta,.compartir{display:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://akyra-website.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guía: cuándo usar IA en tu empresa", "item": "https://akyra-website.vercel.app/guia-ia" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://akyra-website.vercel.app/guia-ia#articulo",
+      "headline": "¿Cuándo conviene usar IA en tu empresa? Guía de decisión para PyMEs",
+      "description": "Criterio práctico para decidir en qué tareas de una PyME conviene aplicar inteligencia artificial: los tres filtros de Repetición, Regla y Revisión, un semáforo de decisión y un test interactivo.",
+      "inLanguage": "es-AR",
+      "datePublished": "2026-08-20",
+      "dateModified": "2026-08-20",
+      "image": "https://akyra-website.vercel.app/og-image.jpg",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://akyra-website.vercel.app/guia-ia" },
+      "author": [
+        { "@type": "Person", "@id": "https://akyra-website.vercel.app/#joaquin", "name": "Joaquín Paz Cabus" },
+        { "@type": "Person", "@id": "https://akyra-website.vercel.app/#nicolas", "name": "Nicolás Lana Castro" }
+      ],
+      "publisher": { "@id": "https://akyra-website.vercel.app/#organizacion" },
+      "about": [
+        { "@type": "Thing", "name": "Inteligencia artificial aplicada a PyMEs" },
+        { "@type": "Thing", "name": "Mejora de procesos" },
+        { "@type": "Thing", "name": "Automatización de tareas" }
+      ],
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://akyra-website.vercel.app/guia-ia#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Conviene usar inteligencia artificial en una PyME chica?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, siempre que la apliques a la tarea correcta. El tamaño de la empresa no es lo que define si sirve: lo que define es que la tarea se repita, se pueda explicar y alguien revise el resultado." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por dónde empiezo si nunca usé IA en mi empresa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Por una sola tarea, no por una herramienta. Elegí la que más tiempo te come en la semana, cronometrala tres veces para saber cuánto tardás hoy y recién después probá." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tareas no conviene automatizar con inteligencia artificial?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Las que dependen de tu criterio caso por caso, las que son trabajo físico o trato humano directo, y las que tendrían consecuencias legales, fiscales o de seguridad si salieran mal y nadie las revisa." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito comprar alguna herramienta o suscripción para empezar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No para los primeros treinta días. El trabajo inicial es medir cuánto tarda la tarea hoy y escribir en diez renglones cómo se hace." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda en verse el ahorro de horas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "En una tarea que pasa los tres filtros, la diferencia se nota dentro del primer mes." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es seguro cargar información de mi empresa en una inteligencia artificial?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende de qué cargues y en qué herramienta. Como criterio general, no subas datos personales de clientes o empleados, información confidencial ni documentación que sea parte de tu ventaja competitiva. Ante la duda, anonimizá antes de pegar." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#contenido" class="skip">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="nav-logo" aria-label="AKYRA Consultora — inicio">
+      <img src="/isotipo-blanco.png" alt="" class="logo-mark" width="34" height="34">
+      <span>AKYRA</span>
+    </a>
+    <div class="nav-right">
+      <a href="/" class="nav-hide">Volver al sitio</a>
+      <a href="/#contacto" class="btn btn-primary">Pedí tu Escaneo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<main id="contenido">
+
+<header class="hero on-dark">
+  <div class="container narrow">
+    <span class="pill"><span class="dot"></span> Recurso gratuito · AKYRA Consultora</span>
+    <h1>¿Cuándo conviene usar <span>IA</span> en tu empresa?</h1>
+    <p class="lead">Guía de decisión para PyMEs y emprendedores argentinos. No toda tarea se resuelve con inteligencia artificial. Acá tenés un criterio simple para saber dónde te va a ahorrar horas de verdad — y dónde te va a hacer perder tiempo y plata.</p>
+    <div class="hero-actions">
+      <a href="#test" class="btn btn-primary">Hacer el test (2 minutos)</a>
+      <a href="#regla" class="btn btn-secondary">Leer la guía</a>
+    </div>
+    <p class="firma">Escrita por <strong>Joaquín Paz Cabus</strong> (Ing. Industrial en curso, UTN · Técnico Enólogo) y <strong>Nicolás Lana Castro</strong> (Ingeniero Químico), socios de AKYRA Consultora. Actualizada el 20 de agosto de 2026.</p>
+    <ul class="meta-row">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 8 minutos de lectura</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Test de decisión incluido</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 3 prompts listos para copiar</li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== ÍNDICE ===== -->
+<div class="toc">
+  <div class="container narrow">
+    <h2>Qué vas a encontrar</h2>
+    <ol>
+      <li><a href="#mito">El problema real</a></li>
+      <li><a href="#regla">La regla de las 3R</a></li>
+      <li><a href="#test">Test de decisión</a></li>
+      <li><a href="#mapa">Dónde funciona hoy</a></li>
+      <li><a href="#errores">Los 5 errores caros</a></li>
+      <li><a href="#plan">Tu plan de 30 días</a></li>
+      <li><a href="#prompts">3 prompts para copiar</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+      <li><a href="#cierre">Trabajar con AKYRA</a></li>
+    </ol>
+  </div>
+</div>
+
+<!-- ===== EL MITO ===== -->
+<section id="mito">
+  <div class="container narrow">
+    <span class="eyebrow">Antes de empezar</span>
+    <h2>El problema ya no es el acceso. Es el criterio.</h2>
+    <p class="respuesta"><b>Respuesta corta:</b> conviene usar inteligencia artificial en una tarea que se repite al menos una vez por semana, que podés explicarle a alguien nuevo en diez minutos y cuyo resultado alguien revisa antes de que salga. Si falla alguno de esos tres filtros, lo que hay que ordenar es el proceso, no comprar una herramienta.</p>
+
+    <div class="tldr">
+      <h2>En resumen</h2>
+      <ul>
+        <li>La IA rinde en tareas <strong>repetitivas, explicables y revisadas</strong> por una persona.</li>
+        <li>No sirve para poner orden: automatizar un proceso desordenado lo hace fallar más rápido.</li>
+        <li>Empezá por <strong>una sola tarea</strong>, medí cuánto te lleva hoy y compará a los treinta días.</li>
+        <li>El test de siete preguntas te dice si conviene, qué te falta o por qué todavía no es el momento.</li>
+      </ul>
+    </div>
+
+    <div class="cta-inline">
+      <a href="#test" class="btn btn-primary">Evaluar una tarea de mi empresa</a>
+      <span class="nota">Dos minutos · gratis · sin dejar datos</span>
+    </div>
+
+    <p class="lead">Durante décadas, la tecnología que ordenaba una empresa costaba una fortuna: sistemas de gestión, consultores full time, equipos de programadores. Por eso se armó la idea de que “eso es para las grandes” y de que uno lo va a aplicar “cuando crezca”.</p>
+    <p>La inteligencia artificial rompió esa lógica. Hoy, un taller de cuatro personas puede usar las mismas herramientas que una empresa de mil empleados, y casi al mismo costo. La brecha competitiva se achicó de golpe.</p>
+    <p>Pero apareció un problema nuevo. Como ahora todo está al alcance, la pregunta dejó de ser <em>“¿puedo acceder?”</em> y pasó a ser <em>“¿en qué la uso?”</em>. Y ahí es donde la mayoría de las PyMEs pierde tiempo: prueban cinco herramientas, se entusiasman una semana y a los quince días vuelven a hacer todo como antes.</p>
+
+    <div class="claim">
+      La IA no ordena el caos. Lo acelera.
+      <small>Si un proceso está desordenado, automatizarlo no lo arregla: hace que el desorden se produzca más rápido y en mayor cantidad. Por eso el orden viene primero y la herramienta después. Siempre en ese orden.</small>
+    </div>
+
+    <p>Esta guía no te va a recomendar herramientas — cambian cada tres meses. Te va a dar algo que dura: <strong>un criterio para decidir</strong>.</p>
+  </div>
+</section>
+
+<!-- ===== LAS 3R ===== -->
+<section id="regla" class="tresR">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">La regla</span>
+      <h2>Las 3R: los tres filtros que tiene que pasar una tarea</h2>
+      <p>Antes de pensar en qué herramienta usar, pensá en la tarea. Si pasa los tres filtros, la IA te va a ahorrar tiempo desde la primera semana. Si falla uno, hay trabajo previo que hacer. Si falla dos, todavía no es el momento.</p>
+    </div>
+    <div class="r-grid">
+      <article class="r-card">
+        <span class="r-num">1</span>
+        <h3>Repetición</h3>
+        <p>La tarea se hace muchas veces. Ordenar algo que hacés una vez al año te cuesta más de lo que te ahorra: el tiempo se recupera en la repetición, no en la tarea individual.</p>
+        <div class="r-test"><span class="lbl">Preguntate</span>¿La hago al menos una vez por semana?</div>
+      </article>
+      <article class="r-card">
+        <span class="r-num">2</span>
+        <h3>Regla</h3>
+        <p>Existe una forma conocida de hacerla. Si no podés explicar cómo se hace, la IA no lo va a adivinar. Y si cada caso es totalmente distinto, todavía no es una tarea: es criterio tuyo.</p>
+        <div class="r-test"><span class="lbl">Preguntate</span>¿Se la puedo explicar a alguien nuevo en 10 minutos?</div>
+      </article>
+      <article class="r-card">
+        <span class="r-num">3</span>
+        <h3>Revisión</h3>
+        <p>Hay una persona que mira el resultado antes de que salga. La IA se equivoca con total seguridad y sin avisar. El control humano no es desconfianza: es parte del diseño del proceso.</p>
+        <div class="r-test"><span class="lbl">Preguntate</span>¿Alguien lo revisa antes de que llegue al cliente?</div>
+      </article>
+    </div>
+
+    <div class="tabla-wrap">
+      <table class="filtros">
+        <caption>Los tres filtros, en una tabla</caption>
+        <thead>
+          <tr><th scope="col">Filtro</th><th scope="col">La pregunta que te hacés</th><th scope="col">Qué hacer si no lo pasa</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Repetición</th>
+            <td>¿La hago al menos una vez por semana?</td>
+            <td>El tiempo que invertís en ordenarla tarda demasiado en volver. Elegí una tarea más frecuente para arrancar.</td>
+          </tr>
+          <tr>
+            <th scope="row">Regla</th>
+            <td>¿Se la puedo explicar a alguien nuevo en diez minutos?</td>
+            <td>Todavía no es una tarea, es criterio tuyo. Anotá los últimos cinco casos y buscá qué tuvieron en común.</td>
+          </tr>
+          <tr>
+            <th scope="row">Revisión</th>
+            <td>¿Alguien mira el resultado antes de que llegue al cliente?</td>
+            <td>Definí quién revisa y qué mira exactamente, antes de automatizar nada.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header" style="margin:var(--s7) 0 0;max-width:720px">
+      <span class="eyebrow">El semáforo</span>
+      <h2>Cómo se lee el resultado</h2>
+    </div>
+    <div class="sem-grid">
+      <div class="sem v"><span class="dot-lg"></span><h3>Verde — Arrancá esta semana</h3><p>Pasa los tres filtros. Es de las tareas donde vas a ver el ahorro de tiempo casi enseguida y sin riesgo. Empezá por acá aunque no sea la tarea más importante: necesitás una victoria rápida para que el equipo se convenza.</p></div>
+      <div class="sem a"><span class="dot-lg"></span><h3>Amarillo — Primero ordená</h3><p>Falla un filtro. La tarea tiene potencial, pero hay que preparar el terreno: escribir cómo se hace, juntar la información en un solo lugar o definir quién revisa. Es trabajo de una o dos semanas, no de meses.</p></div>
+      <div class="sem r"><span class="dot-lg"></span><h3>Rojo — Hoy no, y está bien</h3><p>Falla dos o más filtros, o es una tarea física o de trato humano. No es un fracaso: es información. Sacala de la lista, elegí otra y volvé a esta cuando el proceso esté más maduro.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEST ===== -->
+<section id="test" class="test on-dark">
+  <div class="container narrow">
+    <div class="section-header">
+      <span class="eyebrow">Test de decisión</span>
+      <h2>Probalo con una tarea concreta de tu empresa</h2>
+      <p>Pensá en una sola tarea que hoy te come tiempo. Contestá las siete preguntas y en dos minutos vas a saber si conviene atacarla con IA, qué te falta para que sirva, o por qué todavía no es el momento.</p>
+    </div>
+
+    <div class="test-box">
+      <div class="task-field">
+        <label for="tarea">¿Qué tarea querés evaluar?</label>
+        <input type="text" id="tarea" placeholder="Ej.: responder consultas de precios por WhatsApp" maxlength="80" autocomplete="off">
+      </div>
+
+      <form id="preguntas"></form>
+
+      <div class="test-actions no-print">
+        <button type="button" class="btn btn-primary" id="verResultado">Ver el resultado</button>
+        <button type="button" class="btn btn-secondary" id="reiniciar">Empezar de nuevo</button>
+        <span class="test-note" id="faltan"></span>
+      </div>
+
+      <p class="nota-privacidad">Guardamos de forma anónima tus respuestas y el resultado para entender qué necesitan las PyMEs de la región. No guardamos el nombre de la tarea que escribís ni ningún dato que permita identificarte. <a href="/privacidad">Política de Privacidad</a>.</p>
+
+      <div class="result" id="resultado" role="status" aria-live="polite">
+        <div class="result-head" id="resHead">
+          <div class="result-verdict"><span class="dot-lg"></span><span id="resVerdict"></span></div>
+          <h3 id="resTitulo"></h3>
+          <p id="resTexto"></p>
+        </div>
+        <div class="chips" id="resChips"></div>
+        <div class="result-body">
+          <h4>Qué hacer ahora</h4>
+          <ul id="resPasos"></ul>
+          <div class="gain" id="resGanancia"></div>
+        </div>
+        <div class="result-foot no-print">
+          <button type="button" class="btn btn-secondary" id="copiarResultado">Copiar mi resultado</button>
+          <a class="btn btn-wa" id="waResultado" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Z"/></svg>
+            Consultarlo con AKYRA
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAPA POR ÁREA ===== -->
+<section id="mapa">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">El mapa</span>
+      <h2>Dónde funciona hoy, área por área</h2>
+      <p>Ejemplos concretos de PyMEs y emprendimientos argentinos. No es una lista de deseos: es lo que ya se puede hacer con las herramientas de uso general que están al alcance de cualquiera.</p>
+    </div>
+    <div class="mapa-grid">
+
+      <article class="area">
+        <span class="area-tag">Atención al cliente</span>
+        <h3>Las consultas de siempre</h3>
+        <ul>
+          <li><span class="ico ico-si"></span>Armar respuestas modelo para las 10 preguntas que más te repiten</li>
+          <li><span class="ico ico-si"></span>Redactar el borrador de una respuesta difícil, para que vos la ajustes</li>
+          <li><span class="ico ico-ojo"></span>Un bot que atienda solo: recién cuando tengas escritas las respuestas y los límites</li>
+          <li><span class="ico ico-no"></span>Cerrar precios, plazos o condiciones sin que los mires</li>
+        </ul>
+      </article>
+
+      <article class="area">
+        <span class="area-tag">Administración</span>
+        <h3>El papelerío que se acumula</h3>
+        <ul>
+          <li><span class="ico ico-si"></span>Resumir un contrato largo y marcar las cláusulas a mirar con atención</li>
+          <li><span class="ico ico-si"></span>Comparar tres presupuestos de proveedores en una sola tabla</li>
+          <li><span class="ico ico-si"></span>Ordenar planillas desprolijas y detectar datos faltantes o repetidos</li>
+          <li><span class="ico ico-no"></span>Reemplazar al contador o dar por buena una interpretación legal</li>
+        </ul>
+      </article>
+
+      <article class="area">
+        <span class="area-tag">Ventas y marketing</span>
+        <h3>Comunicar sin frenar la producción</h3>
+        <ul>
+          <li><span class="ico ico-si"></span>Adaptar un mismo mensaje a Instagram, WhatsApp y correo</li>
+          <li><span class="ico ico-si"></span>Escribir fichas y descripciones de producto en serie</li>
+          <li><span class="ico ico-si"></span>Analizar tu historial de ventas y encontrar qué se mueve y qué no</li>
+          <li><span class="ico ico-ojo"></span>Publicar sin leer: la voz de tu marca la ponés vos</li>
+        </ul>
+      </article>
+
+      <article class="area">
+        <span class="area-tag">Producción y operaciones</span>
+        <h3>Sacar el conocimiento de las cabezas</h3>
+        <ul>
+          <li><span class="ico ico-si"></span>Convertir lo que explica un operario en un instructivo de una página</li>
+          <li><span class="ico ico-si"></span>Armar checklists de arranque, cierre y limpieza</li>
+          <li><span class="ico ico-si"></span>Ordenar el análisis de causa raíz de un defecto que se repite</li>
+          <li><span class="ico ico-no"></span>Definir parámetros críticos de proceso o de seguridad sin un técnico</li>
+        </ul>
+      </article>
+
+      <article class="area">
+        <span class="area-tag">Calidad e ISO</span>
+        <h3>La montaña de documentación</h3>
+        <ul>
+          <li><span class="ico ico-si"></span>Redactar procedimientos y registros a partir de tu forma real de trabajar</li>
+          <li><span class="ico ico-si"></span>Traducir la norma a lenguaje que tu equipo entienda</li>
+          <li><span class="ico ico-ojo"></span>Preparar la auditoría: sirve de apoyo, no reemplaza la implementación</li>
+          <li><span class="ico ico-no"></span>Certificar con documentos que describen algo que en la planta no pasa</li>
+        </ul>
+      </article>
+
+      <article class="area">
+        <span class="area-tag">Compras y stock</span>
+        <h3>Decidir con números, no con intuición</h3>
+        <ul>
+          <li><span class="ico ico-si"></span>Comparar cotizaciones que llegan en formatos distintos</li>
+          <li><span class="ico ico-si"></span>Detectar en tu histórico qué se te quiebra siempre y qué se te queda</li>
+          <li><span class="ico ico-ojo"></span>Proyectar demanda: sirve si tenés al menos un año de datos ordenados</li>
+          <li><span class="ico ico-no"></span>Confiar en un número que la IA calculó y vos no verificaste</li>
+        </ul>
+      </article>
+
+    </div>
+    <div class="leyenda">
+      <span><span class="ico ico-si"></span> Se puede hoy</span>
+      <span><span class="ico ico-ojo"></span> Con supervisión o preparación previa</span>
+      <span><span class="ico ico-no"></span> Todavía no</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ERRORES ===== -->
+<section id="errores" class="errores on-dark">
+  <div class="container narrow">
+    <div class="section-header">
+      <span class="eyebrow">Lo que sale caro</span>
+      <h2>Los 5 errores que más vemos</h2>
+      <p>Ninguno tiene que ver con la tecnología. Todos tienen que ver con cómo se encara.</p>
+    </div>
+    <div class="err-list">
+      <div class="err"><div class="err-n">1</div><div class="err-body">
+        <h3>Empezar por la herramienta y no por el problema</h3>
+        <p>“Vi que todos usan tal cosa, ¿cómo la aplico?” es la pregunta al revés. La correcta es: “esta tarea me come seis horas por semana, ¿qué puedo hacer?”. La herramienta es la última decisión, no la primera.</p>
+      </div></div>
+      <div class="err"><div class="err-n">2</div><div class="err-body">
+        <h3>Automatizar un proceso que no está definido</h3>
+        <p>Si cada persona lo hace distinto y nadie lo escribió, no hay nada que automatizar todavía. Escribir los pasos en diez renglones parece poca cosa, pero es el trabajo que hace que todo lo demás funcione.</p>
+      </div></div>
+      <div class="err"><div class="err-n">3</div><div class="err-body">
+        <h3>No medir el “antes”</h3>
+        <p>Si no sabés cuánto tardabas, nunca vas a poder demostrar que ganaste. Cronometrá la tarea tres veces antes de tocar nada. Es el número que después te va a permitir defender la decisión ante tu socio, tu equipo o vos mismo.</p>
+      </div></div>
+      <div class="err"><div class="err-n">4</div><div class="err-body">
+        <h3>Delegar el criterio, no la tarea</h3>
+        <p>La IA propone; vos decidís. En el momento en que aceptás un resultado sin leerlo, dejaste de usar una herramienta y empezaste a tercerizar tu responsabilidad. Ante un cliente o un organismo, la firma sigue siendo tuya.</p>
+      </div></div>
+      <div class="err"><div class="err-n">5</div><div class="err-body">
+        <h3>Abrir diez frentes a la vez</h3>
+        <p>Pagar cinco suscripciones y no usar ninguna es el final más común. Una tarea, una herramienta, treinta días. Cuando esa quedó andando y alguien más la puede hacer sin vos, recién ahí vas por la segunda.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLAN 30 DÍAS ===== -->
+<section id="plan" class="plan">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Para aplicar</span>
+      <h2>Tu plan de 30 días</h2>
+      <p>Una sola tarea. Cuatro semanas. Sin comprar nada todavía.</p>
+    </div>
+    <div class="plan-grid">
+      <article class="week">
+        <span class="week-lbl">Semana 1</span>
+        <h3>Elegí y medí</h3>
+        <p>Elegí una única tarea que haya dado verde en el test. Cronometrala tres veces y anotá los minutos. No cambies nada todavía: solo mirá cómo se hace hoy.</p>
+        <div class="out"><span>Te queda: un número.</span></div>
+      </article>
+      <article class="week">
+        <span class="week-lbl">Semana 2</span>
+        <h3>Escribí cómo se hace</h3>
+        <p>Diez renglones, con tus palabras, como se lo explicarías a alguien que entra mañana. Qué se hace, en qué orden, y cómo sabés que salió bien. Ese papel vale más que cualquier suscripción.</p>
+        <div class="out"><span>Te queda: un instructivo.</span></div>
+      </article>
+      <article class="week">
+        <span class="week-lbl">Semana 3</span>
+        <h3>Probá en paralelo</h3>
+        <p>Hacé la tarea con IA y como siempre, al mismo tiempo, y compará los resultados. Cuando algo salga mal, corregí las instrucciones que diste — no bajes la expectativa.</p>
+        <div class="out"><span>Te queda: una versión que funciona.</span></div>
+      </article>
+      <article class="week">
+        <span class="week-lbl">Semana 4</span>
+        <h3>Medí y pasala</h3>
+        <p>Cronometrá de nuevo y compará con la semana 1. Si ganaste tiempo, sumá el paso al instructivo y que otra persona lo haga sin vos. Si no ganaste, la tarea era amarilla: elegí otra.</p>
+        <div class="out"><span>Te queda: horas libres.</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMPTS ===== -->
+<section id="prompts" class="prompts">
+  <div class="container narrow">
+    <div class="section-header">
+      <span class="eyebrow">Para arrancar hoy</span>
+      <h2>Tres instrucciones listas para copiar</h2>
+      <p>Funcionan en cualquier asistente de IA de uso general. Copiá el texto, completá lo que está entre corchetes y mandalo tal cual.</p>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt-head">
+        <div><span class="tag">Prompt 1</span><h3>Convertir lo que sabés en un instructivo</h3></div>
+        <button type="button" class="copy-btn" data-target="p1">Copiar</button>
+      </div>
+      <pre id="p1">Actuá como un consultor de mejora de procesos. Te voy a explicar, con mis palabras y en desorden, cómo hacemos una tarea en mi empresa.
+
+Devolveme un instructivo de una sola página que incluya: objetivo, responsable, qué se necesita para hacerla, pasos numerados, controles de calidad (qué mirar para saber que salió bien) y errores frecuentes.
+
+Escribilo en lenguaje simple, para que lo entienda alguien que empieza a trabajar mañana. Si algo de lo que te cuento está incompleto o es ambiguo, preguntámelo antes de escribir en vez de suponerlo.
+
+Mi empresa: <b>[rubro y cuántas personas somos]</b>
+La tarea: <b>[contá cómo la hacés, como te salga]</b></pre>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt-head">
+        <div><span class="tag">Prompt 2</span><h3>Descubrir qué ordenar primero</h3></div>
+        <button type="button" class="copy-btn" data-target="p2">Copiar</button>
+      </div>
+      <pre id="p2">Sos un ingeniero industrial ayudándome a priorizar. Te paso la lista de tareas que hago o superviso en una semana típica.
+
+Ordenámelas en una tabla con estas columnas: tarea, veces por semana, minutos por vez, horas al mes, ¿se puede explicar en 10 minutos? (sí/no), riesgo si sale mal (bajo/medio/alto), prioridad para ordenar o automatizar (alta/media/baja).
+
+Al final, decime cuál atacarías primero y por qué, en tres renglones. No agregues tareas que yo no te haya dado, y si te falta un dato para calcular, pedímelo.
+
+Mis tareas: <b>[listalas como te salgan, sin ordenar]</b></pre>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt-head">
+        <div><span class="tag">Prompt 3</span><h3>Responder lo de siempre, sin sonar a robot</h3></div>
+        <button type="button" class="copy-btn" data-target="p3">Copiar</button>
+      </div>
+      <pre id="p3">Te paso cinco mensajes reales que me llegan seguido de clientes, junto con la forma en que yo los respondo. Primero estudiá cómo escribo: el tono, el largo, si trato de usted o de vos, las palabras que uso.
+
+Después armame respuestas modelo para esas cinco consultas, listas para copiar y pegar, dejando un espacio entre corchetes donde yo tenga que completar el dato de cada caso.
+
+Reglas: no prometas plazos, precios ni condiciones que yo no haya escrito, y si una consulta necesita una decisión mía, que la respuesta lo diga en vez de inventar.
+
+Mensajes y mis respuestas: <b>[pegalos acá]</b></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="faq" class="faq">
+  <div class="container narrow">
+    <div class="section-header">
+      <span class="eyebrow">Dudas frecuentes</span>
+      <h2>Preguntas sobre usar IA en una PyME</h2>
+      <p>Las que más nos hacen los dueños de empresa cuando bajamos esto a la práctica.</p>
+    </div>
+    <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Conviene usar inteligencia artificial en una PyME chica?</summary>
+          <p>Sí, siempre que la apliques a la tarea correcta. El tamaño de la empresa no es lo que define si sirve: lo que define es que la tarea se repita, se pueda explicar y alguien revise el resultado. Una empresa de cuatro personas con una tarea que se hace todos los días recupera más horas que una de cien con un proceso que cambia en cada caso.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Por dónde empiezo si nunca usé IA en mi empresa?</summary>
+          <p>Por una sola tarea, no por una herramienta. Elegí la que más tiempo te come en la semana, cronometrala tres veces para saber cuánto tardás hoy y recién después probá. Sin ese número de partida no vas a poder demostrar si ganaste algo.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué tareas no conviene automatizar con inteligencia artificial?</summary>
+          <p>Las que dependen de tu criterio caso por caso, las que son trabajo físico o trato humano directo, y las que tendrían consecuencias legales, fiscales o de seguridad si salieran mal y nadie las revisa. Tampoco conviene automatizar un proceso que todavía nadie escribió: la IA no ordena el caos, lo acelera.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Necesito comprar alguna herramienta o suscripción para empezar?</summary>
+          <p>No para los primeros treinta días. El trabajo inicial es medir cuánto tarda la tarea hoy y escribir en diez renglones cómo se hace. Recién cuando eso está claro tiene sentido evaluar una herramienta, y en general alcanza con un asistente de uso general.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuánto tiempo tarda en verse el ahorro de horas?</summary>
+          <p>En una tarea que pasa los tres filtros, la diferencia se nota dentro del primer mes. Si al cabo de cuatro semanas no podés medir una mejora contra tu número de partida, lo más probable es que la tarea no estuviera lista y convenga elegir otra.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Es seguro cargar información de mi empresa en una inteligencia artificial?</summary>
+          <p>Depende de qué cargues y en qué herramienta. Como criterio general, no subas datos personales de clientes o empleados, información sujeta a confidencialidad, ni documentación técnica que sea parte de tu ventaja competitiva. Revisá si la herramienta usa lo que escribís para entrenar sus modelos y desactivá esa opción cuando exista. Ante la duda, anonimizá: cambiá nombres y montos antes de pegar.</p>
+        </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="compartir">
+  <div class="container narrow">
+    <h2>¿Conocés a alguien que esté con este problema?</h2>
+    <p>Pasásela. Es gratis y no pedimos datos a nadie.</p>
+    <div class="share-row">
+      <a class="share-btn wa" href="https://wa.me/?text=Te%20paso%20esta%20gu%C3%ADa%20para%20saber%20cu%C3%A1ndo%20conviene%20usar%20IA%20en%20una%20empresa%3A%20https%3A%2F%2Fakyra-website.vercel.app%2Fguia-ia" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Z" fill="currentColor"/></svg>
+        WhatsApp
+      </a>
+      <a class="share-btn li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fakyra-website.vercel.app%2Fguia-ia" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.6 8.75 22 11.1 22 14.2V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-4V9Z" fill="currentColor"/></svg>
+        LinkedIn
+      </a>
+      <button type="button" class="share-btn link" id="copiarLink">Copiar el link</button>
+    </div>
+  </div>
+</section>
+
+<section id="cierre" class="cta on-dark">
+  <div class="container narrow">
+    <span class="eyebrow" style="color:var(--white)">AKYRA Consultora</span>
+    <h2>Si querés que lo hagamos juntos</h2>
+    <p>Somos una consultora de ingeniería en San Rafael, Mendoza. Ordenamos procesos de PyMEs y aplicamos IA donde realmente rinde. Empezamos con una visita y un informe claro en 48 horas, sin compromiso.</p>
+    <div class="cta-actions">
+      <a class="btn btn-wa" href="https://wa.me/5492604592193?text=Hola%20AKYRA%2C%20le%C3%AD%20la%20gu%C3%ADa%20de%20IA%20y%20quiero%20consultarles" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+      <a class="btn btn-secondary" href="https://akyra-website.vercel.app/" target="_blank" rel="noopener">Ver la web</a>
+      <button type="button" class="btn btn-secondary no-print" id="imprimir">Guardar en PDF</button>
+    </div>
+    <div class="cta-foot">
+      <p>AKYRA Consultora — Ingeniería con Propósito · San Rafael, Mendoza<br>
+      <a href="https://www.instagram.com/akyraconsultora/" target="_blank" rel="noopener">@akyraconsultora</a> · <a href="mailto:akyraconsultora@gmail.com">akyraconsultora@gmail.com</a></p>
+      <p style="margin-top:14px;font-size:.78rem">Este material es orientativo y no reemplaza asesoramiento profesional para tu caso puntual.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" aria-label="AKYRA Consultora — inicio">
+        <img src="/isotipo-blanco.png" alt="" class="logo-mark" width="30" height="30">
+        <span>AKYRA</span>
+      </a>
+      <p>Consultoría de ingeniería en San Rafael, Mendoza. Ordenamos tu producción y te hacemos ganar tiempo.</p>
+    </div>
+    <div class="footer-col">
+      <span class="footer-h">Servicios</span>
+      <a href="/#servicios">Escaneo de Planta</a>
+      <a href="/#servicios">Mejora de procesos</a>
+      <a href="/#servicios">ISO 9001 / 14001</a>
+      <a href="/#servicios">IA aplicada</a>
+    </div>
+    <div class="footer-col">
+      <span class="footer-h">Empresa</span>
+      <a href="/#nosotros">Nosotros</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contacto">Contacto</a>
+      <a href="/privacidad">Política de Privacidad</a>
+      <a href="/terminos">Términos y Condiciones</a>
+    </div>
+    <div class="footer-col">
+      <span class="footer-h">Contacto</span>
+      <address class="footer-nap">AKYRA Consultora<br>Las Heras 567, San Rafael<br>Mendoza (5600), Argentina</address>
+      <a href="tel:+5492604592193">+54 9 260 459-2193</a>
+      <a href="mailto:akyraconsultora@gmail.com">akyraconsultora@gmail.com</a>
+      <a href="https://wa.me/5492604592193" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/akyraconsultora/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="container footer-base">
+    <p>© <span id="year"></span> AKYRA Consultora — Ingeniería con Propósito · <a href="/privacidad">Política de Privacidad</a> · <a href="/terminos">Términos y Condiciones</a></p>
+  </div>
+</footer>
+
+
+<div class="sticky-cta" aria-label="Acciones rápidas">
+  <a href="#test" class="btn btn-primary">Hacer el test</a>
+  <a href="https://wa.me/5492604592193?text=Hola%20AKYRA%2C%20le%C3%AD%20la%20gu%C3%ADa%20de%20IA%20y%20quiero%20consultarles" class="btn btn-sticky-wa" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Z" fill="currentColor"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<a href="https://wa.me/5492604592193?text=Hola%20AKYRA%2C%20le%C3%AD%20la%20gu%C3%ADa%20de%20IA%20y%20quiero%20consultarles"
+   class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3Z" fill="currentColor"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="/config.js" defer></script>
+<script>
+(function(){
+  'use strict';
+
+  function ready(fn){
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', fn); }
+    else { fn(); }
+  }
+
+
+  /* Guarda el intento de forma anonima. Nunca bloquea ni rompe el test. */
+  function guardarIntento(r, veredicto, rep, regla, rev, horas){
+    try {
+      if (typeof AKYRA_CONFIG === 'undefined') return;
+      if (!AKYRA_CONFIG.isConfigured || !AKYRA_CONFIG.isConfigured.supabase) return;
+      if (!window.supabase || !window.supabase.createClient) return;
+      var cli = window.supabase.createClient(AKYRA_CONFIG.supabase.url, AKYRA_CONFIG.supabase.anonKey);
+      var fila = {
+        frecuencia: r.q1, horas_semana: r.q2, explicable: r.q3, datos: r.q4,
+        naturaleza: r.q5, riesgo: r.q6, revision: r.q7,
+        veredicto: veredicto,
+        filtro_repeticion: rep, filtro_regla: regla, filtro_revision: rev,
+        horas_mes_estimadas: horas || null
+      };
+      var p = cli.from('test_ia').insert([fila]);
+      if (p && p.then) p.then(function(){}, function(){});
+    } catch (e) { /* silencio: la medicion nunca puede romper la experiencia */ }
+  }
+
+  function each(list, fn){ for (var i = 0; i < list.length; i++) { fn(list[i], i); } }
+  function id(x){ return document.getElementById(x); }
+  function subir(el){
+    if (!el) return;
+    try { el.scrollIntoView({behavior:'smooth', block:'center'}); }
+    catch (e) { try { el.scrollIntoView(); } catch (e2) {} }
+  }
+  function padre(el, clase){
+    while (el && el !== document.body) {
+      if (el.className && (' ' + el.className + ' ').indexOf(' ' + clase + ' ') > -1) return el;
+      el = el.parentNode;
+    }
+    return null;
+  }
+  function copiar(texto, ok){
+    var listo = false;
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = texto;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '0';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, texto.length);
+      listo = document.execCommand('copy');
+      document.body.removeChild(ta);
+    } catch (e) { listo = false; }
+    if (listo) { ok(true); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(function(){ ok(true); }, function(){ ok(false); });
+    } else { ok(false); }
+  }
+  function feedback(btn, exito){
+    var prev = btn.getAttribute('data-label') || btn.textContent;
+    btn.setAttribute('data-label', prev);
+    btn.textContent = exito ? 'Copiado' : 'Copialo a mano';
+    if (exito) btn.className += ' done';
+    setTimeout(function(){
+      btn.textContent = prev;
+      btn.className = btn.className.replace(/\s*done/g, '');
+    }, 2000);
+  }
+
+  ready(function(){
+
+    var anio = document.getElementById('year');
+    if (anio) anio.textContent = new Date().getFullYear();
+
+    /* ---------- Barra de progreso ---------- */
+    var bar = id('progress');
+    if (bar) {
+      var pintar = function(){
+        var h = (document.documentElement.scrollHeight || 0) - window.innerHeight;
+        var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+        bar.style.width = (h > 0 ? Math.min(100, (y / h) * 100) : 0) + '%';
+      };
+      window.addEventListener('scroll', pintar);
+      window.addEventListener('resize', pintar);
+      pintar();
+    }
+
+    /* ---------- Imprimir ---------- */
+    var btnImp = id('imprimir');
+    if (btnImp) btnImp.onclick = function(){ window.print(); };
+
+    /* ---------- Copiar prompts ---------- */
+    each(document.querySelectorAll('.copy-btn'), function(btn){
+      btn.onclick = function(){
+        var destino = id(btn.getAttribute('data-target'));
+        if (!destino) return;
+        var txt = destino.innerText || destino.textContent || '';
+        copiar(txt.replace(/ /g, ' '), function(exito){ feedback(btn, exito); });
+      };
+    });
+
+    /* ---------- Test de decisión ---------- */
+    var PREGUNTAS = [
+      { id:'q1', txt:'¿Cada cuánto se hace esta tarea?', opts:[
+        {t:'Varias veces por día', v:3},
+        {t:'Algunas veces por semana', v:2},
+        {t:'Una o dos veces por mes', v:1},
+        {t:'Un par de veces por año', v:0}
+      ]},
+      { id:'q2', txt:'¿Cuánto tiempo te come por semana, sumando todo?', opts:[
+        {t:'Más de 5 horas', v:3},
+        {t:'Entre 1 y 5 horas', v:2},
+        {t:'Menos de 1 hora', v:1}
+      ]},
+      { id:'q3', txt:'¿Podrías explicarle a alguien nuevo cómo se hace, paso a paso, en menos de 10 minutos?', opts:[
+        {t:'Sí, y de hecho ya está escrito en algún lado', v:3},
+        {t:'Sí, pero hoy solo está en mi cabeza', v:2},
+        {t:'No, cada caso es distinto y depende de mi criterio', v:0}
+      ]},
+      { id:'q4', txt:'La información que necesita esa tarea, ¿dónde está?', opts:[
+        {t:'Ordenada y en un solo lugar digital', v:3},
+        {t:'En la computadora, pero dispersa en varios archivos', v:2},
+        {t:'En papel, en la cabeza de alguien, o no existe', v:0}
+      ]},
+      { id:'q5', txt:'La tarea es principalmente…', opts:[
+        {t:'Texto, números, mensajes o imágenes en la computadora', v:3},
+        {t:'Una mezcla de computadora y trabajo físico', v:1},
+        {t:'Trabajo físico, o trato cara a cara con una persona', v:0}
+      ]},
+      { id:'q6', txt:'Si el resultado saliera mal, ¿qué pasaría?', opts:[
+        {t:'Lo corregimos y no pasa nada', v:3},
+        {t:'Podría molestar a un cliente o costarnos una venta', v:2},
+        {t:'Podría traer un problema legal, fiscal o de seguridad', v:0}
+      ]},
+      { id:'q7', txt:'¿Alguien revisaría el resultado antes de que salga?', opts:[
+        {t:'Sí, siempre lo mira una persona', v:3},
+        {t:'A veces, si hay tiempo', v:1},
+        {t:'No, saldría directo', v:0}
+      ]}
+    ];
+
+    var cont = id('preguntas');
+    var respuestas = {};
+    var ultimo = null;
+    if (!cont) return;
+
+    each(PREGUNTAS, function(q, i){
+      var fs = document.createElement('fieldset');
+      fs.className = 'q';
+      fs.setAttribute('data-q', q.id);
+      var leyenda = document.createElement('legend');
+      leyenda.className = 'q-label';
+      leyenda.innerHTML = '<span class="n">' + (i + 1) + '.</span>';
+      leyenda.appendChild(document.createTextNode(q.txt));
+      fs.appendChild(leyenda);
+      var caja = document.createElement('div');
+      caja.className = 'opts';
+      each(q.opts, function(o){
+        var lab = document.createElement('label');
+        lab.className = 'opt';
+        var inp = document.createElement('input');
+        inp.type = 'radio';
+        inp.name = q.id;
+        inp.value = String(o.v);
+        lab.appendChild(inp);
+        var sp = document.createElement('span');
+        sp.appendChild(document.createTextNode(o.t));
+        lab.appendChild(sp);
+        caja.appendChild(lab);
+      });
+      fs.appendChild(caja);
+      cont.appendChild(fs);
+    });
+
+    cont.onsubmit = function(e){ if (e && e.preventDefault) e.preventDefault(); return false; };
+
+    cont.addEventListener('change', function(e){
+      var t = e.target;
+      if (!t || t.type !== 'radio') return;
+      respuestas[t.name] = parseInt(t.value, 10);
+      each(cont.querySelectorAll('input[name="' + t.name + '"]'), function(r){
+        var lab = padre(r, 'opt');
+        if (!lab) return;
+        lab.className = r.checked ? 'opt checked' : 'opt';
+      });
+      var fs = cont.querySelector('fieldset[data-q="' + t.name + '"]');
+      if (fs) fs.className = 'q';
+      contador();
+    });
+
+    function contador(){
+      var faltan = 0;
+      each(PREGUNTAS, function(q){ if (respuestas[q.id] === undefined) faltan++; });
+      var el = id('faltan');
+      if (!el) return;
+      el.textContent = faltan === 0
+        ? 'Listo, ya podés ver el resultado'
+        : ('Faltan ' + faltan + (faltan === 1 ? ' respuesta' : ' respuestas'));
+    }
+
+    var btnReset = id('reiniciar');
+    if (btnReset) btnReset.onclick = function(){
+      respuestas = {};
+      ultimo = null;
+      each(cont.querySelectorAll('input[type="radio"]'), function(r){
+        r.checked = false;
+        var lab = padre(r, 'opt');
+        if (lab) lab.className = 'opt';
+      });
+      each(cont.querySelectorAll('fieldset'), function(f){ f.className = 'q'; });
+      var campo = id('tarea');
+      if (campo) campo.value = '';
+      var res = id('resultado');
+      if (res) res.className = 'result';
+      contador();
+      subir(id('test'));
+    };
+
+    var btnVer = id('verResultado');
+    if (btnVer) btnVer.onclick = calcular;
+
+    var campoTarea = id('tarea');
+    if (campoTarea) campoTarea.onkeydown = function(e){
+      if (e && (e.key === 'Enter' || e.keyCode === 13)) { if (e.preventDefault) e.preventDefault(); calcular(); }
+    };
+
+    function calcular(){
+      var pendiente = null;
+      each(PREGUNTAS, function(q){ if (!pendiente && respuestas[q.id] === undefined) pendiente = q; });
+
+      if (pendiente){
+        var fs = cont.querySelector('fieldset[data-q="' + pendiente.id + '"]');
+        if (fs){
+          fs.className = 'q pendiente';
+          subir(fs);
+        }
+        var nota = id('faltan');
+        if (nota) nota.textContent = 'Te falta contestar la pregunta marcada en rojo';
+        return;
+      }
+
+      var r = respuestas;
+      var tarea = (id('tarea') && id('tarea').value ? id('tarea').value : '').replace(/\s+/g, ' ').replace(/^ | $/g, '');
+      var nombre = tarea ? '“' + tarea + '”' : 'Esta tarea';
+
+      var repOk   = r.q1 >= 2;
+      var reglaOk = r.q3 >= 2 && r.q4 >= 2;
+      var revOk   = r.q7 === 3 || (r.q7 >= 1 && r.q6 >= 2);
+      var okCount = (repOk ? 1 : 0) + (reglaOk ? 1 : 0) + (revOk ? 1 : 0);
+      var esFisica = r.q5 === 0;
+
+      var color, verdict, titulo, texto, pasos = [];
+
+      if (esFisica){
+        color = 'r'; verdict = 'Rojo — todavía no';
+        titulo = nombre + ' no entra en el terreno de la IA, y eso no es un problema.';
+        texto = 'Lo que marcaste es trabajo físico o trato humano directo. Ahí la IA no entra, pero casi siempre hay una tarea de escritorio pegada a esa (el registro, el pedido, el presupuesto, el seguimiento) que sí es candidata. Esa es la que conviene evaluar.';
+        pasos = [
+          'Separá la parte física de la parte administrativa: anotá qué se escribe, se registra o se comunica alrededor de esta tarea.',
+          'Volvé a hacer el test con esa parte administrativa.',
+          'Si el valor de la tarea está justamente en el trato humano, protegelo: usá la IA para liberarte de otras cosas y tener más tiempo para esto.'
+        ];
+      } else if (okCount === 3){
+        color = 'v'; verdict = 'Verde — arrancá esta semana';
+        titulo = nombre + ' pasa los tres filtros. Es por acá.';
+        texto = 'Se repite lo suficiente, se puede explicar y alguien la revisa antes de que salga. Es de las tareas donde el ahorro de tiempo aparece rápido y el riesgo es bajo. Aunque no sea tu problema más grande, empezá por esta: necesitás una victoria concreta para que el equipo se sume.';
+        pasos = [
+          'Cronometrala tres veces esta semana y anotá los minutos. Ese número es tu punto de partida.',
+          'Escribí en diez renglones cómo se hace hoy, con tus palabras.',
+          'Usá el Prompt 1 de esta guía para convertir esos renglones en un instructivo prolijo.',
+          'La semana que viene, hacela con IA y como siempre en paralelo, y compará los dos resultados.'
+        ];
+        if (r.q7 === 1) pasos.push('Definí quién revisa siempre, no “si hay tiempo”. Sin revisor fijo, el proceso se cae al primer error.');
+      } else if (okCount === 2){
+        color = 'a'; verdict = 'Amarillo — primero ordená';
+        titulo = nombre + ' tiene potencial, pero le falta una pata.';
+        texto = 'Dos de los tres filtros están bien. Lo que falta no se arregla con una herramienta: se arregla con una o dos semanas de orden. Hacé eso primero y después volvé.';
+        if (!repOk) pasos.push('Repetición: se hace muy de vez en cuando, así que el tiempo que invertís en ordenarla tarda en volver. Buscá una tarea más frecuente para arrancar y dejá esta para más adelante.');
+        if (!reglaOk){
+          if (r.q3 === 0) pasos.push('Regla: hoy depende de tu criterio caso por caso. Anotá los últimos cinco casos y buscá qué tuvieron en común: ahí aparece la regla que todavía no está escrita.');
+          else pasos.push('Regla: la información está dispersa o en papel. Juntá en un solo archivo digital lo que la tarea necesita. Ese paso solo ya te va a ahorrar tiempo, con IA o sin ella.');
+        }
+        if (!revOk) pasos.push('Revisión: nadie mira el resultado antes de que salga y el error sería caro. Definí quién revisa y qué mira exactamente, antes de automatizar nada.');
+        pasos.push('Cuando resuelvas eso, volvé a hacer el test: en general pasa a verde.');
+      } else {
+        color = 'r'; verdict = 'Rojo — hoy no';
+        titulo = nombre + ' todavía no está lista, y forzarla sale caro.';
+        texto = 'Fallan dos o más filtros. Automatizar algo así no te ahorra tiempo: te genera trabajo nuevo, porque vas a tener que corregir los resultados uno por uno. Esto no es un “no” definitivo, es un “no en este orden”.';
+        if (!repOk) pasos.push('Se hace pocas veces: el esfuerzo de ordenarla no se recupera. Elegí primero una tarea de todos los días.');
+        if (!reglaOk) pasos.push('No hay una forma definida de hacerla, o la información no está ordenada. Ese es el trabajo real y va primero: escribir el proceso y juntar los datos en un solo lugar.');
+        if (!revOk) pasos.push('El error sería caro y nadie revisa. Mientras siga así, cualquier automatización es un riesgo, no una mejora.');
+        pasos.push('Elegí otra tarea y hacé el test de nuevo. Volvé a esta cuando el proceso esté más maduro.');
+      }
+
+      var head = id('resHead');
+      if (head) head.className = 'result-head ' + color;
+      if (id('resVerdict')) id('resVerdict').textContent = verdict;
+      if (id('resTitulo')) id('resTitulo').textContent = titulo;
+      if (id('resTexto')) id('resTexto').textContent = texto;
+
+      var chips = id('resChips');
+      if (chips){
+        chips.innerHTML = '';
+        each([['Repetición', repOk], ['Regla', reglaOk], ['Revisión', revOk]], function(par){
+          var sp = document.createElement('span');
+          sp.className = 'chip ' + (par[1] ? 'ok' : 'no');
+          var ic = document.createElement('span');
+          ic.className = 'ico ' + (par[1] ? 'ico-si' : 'ico-no');
+          sp.appendChild(ic);
+          sp.appendChild(document.createTextNode(par[0]));
+          chips.appendChild(sp);
+        });
+      }
+
+      var ul = id('resPasos');
+      if (ul){
+        ul.innerHTML = '';
+        each(pasos, function(p){
+          var li = document.createElement('li');
+          var ic = document.createElement('span');
+          ic.className = 'ico';
+          li.appendChild(ic);
+          var sp = document.createElement('span');
+          sp.appendChild(document.createTextNode(p));
+          li.appendChild(sp);
+          ul.appendChild(li);
+        });
+      }
+
+      var horasMes = 0;
+      var gan = id('resGanancia');
+      if (gan){
+        if (!esFisica && okCount >= 2){
+          var horasSemana = r.q2 === 3 ? 6 : (r.q2 === 2 ? 3 : 0.5);
+          horasMes = Math.round(horasSemana * 4.3 * 0.5);
+          gan.style.display = 'block';
+          gan.innerHTML = horasMes >= 1
+            ? 'Si recuperás solo la mitad del tiempo que hoy te lleva, son cerca de <b>' + horasMes + ' horas al mes</b> que vuelven a tu semana. Multiplicalo por tu costo por hora y ya tenés el número para decidir.'
+            : 'El ahorro de tiempo acá es chico. Sirve igual como tarea de práctica, pero para ganar horas de verdad buscá algo que te consuma más de una hora por semana.';
+        } else {
+          gan.style.display = 'none';
+        }
+      }
+
+      ultimo = {
+        tarea: tarea || 'una tarea de mi empresa',
+        verdict: verdict,
+        rep: repOk, regla: reglaOk, rev: revOk,
+        pasos: pasos,
+        horas: (!esFisica && okCount >= 2 && horasMes >= 1) ? horasMes : 0
+      };
+
+      var wa = id('waResultado');
+      if (wa){
+        var msg = 'Hola AKYRA, hice el test de la guía de IA.\n' +
+                  'Tarea: ' + ultimo.tarea + '\n' +
+                  'Resultado: ' + verdict + '\n' +
+                  'Filtros: Repetición ' + (repOk ? 'OK' : 'no') +
+                  ', Regla ' + (reglaOk ? 'OK' : 'no') +
+                  ', Revisión ' + (revOk ? 'OK' : 'no') + '\n' +
+                  'Me gustaría que lo veamos juntos.';
+        wa.href = 'https://wa.me/5492604592193?text=' + encodeURIComponent(msg);
+      }
+
+      guardarIntento(r, verdict, repOk, reglaOk, revOk, horasMes);
+
+      var res = id('resultado');
+      if (res){
+        res.className = 'result show';
+        subir(res);
+      }
+    }
+
+    var btnLink = id('copiarLink');
+    if (btnLink) btnLink.onclick = function(){
+      copiar('https://akyra-website.vercel.app/guia-ia', function(exito){ feedback(btnLink, exito); });
+    };
+
+    var btnCopiarRes = id('copiarResultado');
+    if (btnCopiarRes) btnCopiarRes.onclick = function(){
+      if (!ultimo) return;
+      var lineas = [];
+      lineas.push('TEST: ¿Cuándo conviene usar IA en tu empresa? — AKYRA Consultora');
+      lineas.push('');
+      lineas.push('Tarea evaluada: ' + ultimo.tarea);
+      lineas.push('Resultado: ' + ultimo.verdict);
+      lineas.push('Repetición: ' + (ultimo.rep ? 'pasa' : 'no pasa'));
+      lineas.push('Regla: ' + (ultimo.regla ? 'pasa' : 'no pasa'));
+      lineas.push('Revisión: ' + (ultimo.rev ? 'pasa' : 'no pasa'));
+      if (ultimo.horas) lineas.push('Ahorro estimado: ~' + ultimo.horas + ' horas al mes');
+      lineas.push('');
+      lineas.push('Qué hacer ahora:');
+      each(ultimo.pasos, function(p, i){ lineas.push((i + 1) + '. ' + p); });
+      copiar(lineas.join('\n'), function(exito){ feedback(btnCopiarRes, exito); });
+    };
+
+    contador();
+  });
+})();
+</script>
+</body>
+</html>
